@@ -1,0 +1,70 @@
+; Demo sprites for tft4. One character per pixel:
+;   .  transparent       0-9 A-F  palette index (see DefaultPalette in tft4.asm)
+;   1 Navy 2 Plum 3 DkGreen 4 Brown 5 DkGrey 6 LtGrey 7 White 8 Red
+;   9 Orange A Yellow B Green C Sky D Lavender E Pink F Peach
+
+sprite Crab
+..B....B..
+...B..B...
+..BBBBBB..
+.BB7BB7BB.
+BBBBBBBBBB
+B.BBBBBB.B
+B.B....B.B
+...BB.BB..
+
+sprite Squid
+....EE....
+...EEEE...
+..EEEEEE..
+.EE7EE7EE.
+.EEEEEEEE.
+...E..E...
+..E.EE.E..
+.E.E..E.E.
+
+sprite Octopus
+...CCCC...
+.CCCCCCCC.
+CCCCCCCCCC
+CCC77CC77C
+CCCCCCCCCC
+..CCC.CCC.
+.CC.CC.CC.
+CC......CC
+
+sprite Ship
+....7....
+...777...
+...7C7...
+..77777..
+.7777777.
+777777777
+78.787.87
+.9..9..9.
+
+sprite Ball
+..AAAA..
+.AAAAAA.
+AA7AAAAA
+AA77AAAA
+AAAAAA9A
+AAAAA99A
+.AAA999.
+..9999..
+
+sprite Heart
+.88..88.
+8888888E
+88888888
+88888888
+.888888.
+..8888..
+...88...
+
+sprite Ufo
+.....DDDDD.....
+...DDDDDDDDD...
+..D7D7D7D7D7D..
+DDDDDDDDDDDDDDD
+..99.......99..

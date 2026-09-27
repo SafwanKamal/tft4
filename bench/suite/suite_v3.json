@@ -1,0 +1,240 @@
+[
+ {
+  "scene": "Idle (nothing changes)",
+  "TI C driver": {
+   "avg": 0.0,
+   "worst": 0.0,
+   "spi": 0.0,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 0.200375,
+   "worst": 0.200375,
+   "spi": 0.0,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "1 sprite 8x8",
+  "TI C driver": {
+   "avg": 1.660875,
+   "worst": 1.660875,
+   "spi": 357.0,
+   "wrong": 21,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 1.22975,
+   "worst": 1.258375,
+   "spi": 222.0,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "4 sprites 8x8",
+  "TI C driver": {
+   "avg": 6.6435,
+   "worst": 6.6435,
+   "spi": 1428.0,
+   "wrong": 81,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 4.113149999999999,
+   "worst": 4.3175,
+   "spi": 876.1,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "16 sprites 8x8",
+  "TI C driver": {
+   "avg": 26.574075,
+   "worst": 26.574125,
+   "spi": 5712.0,
+   "wrong": 328,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 17.426875,
+   "worst": 17.66625,
+   "spi": 4102.5,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "32 sprites 8x8",
+  "TI C driver": {
+   "avg": 53.1481125,
+   "worst": 53.14825,
+   "spi": 11424.0,
+   "wrong": 619,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 33.1771875,
+   "worst": 34.655625,
+   "spi": 7980.6,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "1 sprite 16x16",
+  "TI C driver": {
+   "avg": 4.7525249999999994,
+   "worst": 4.752625,
+   "spi": 1213.0,
+   "wrong": 65,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 2.877125,
+   "worst": 2.88625,
+   "spi": 588.8,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "1 sprite 32x32",
+  "TI C driver": {
+   "avg": 16.046125,
+   "worst": 16.046125,
+   "spi": 4461.0,
+   "wrong": 239,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 8.8801875,
+   "worst": 8.883875,
+   "spi": 1904.0,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "1 sprite 64x64",
+  "TI C driver": {
+   "avg": 59.07975,
+   "worst": 59.07975,
+   "spi": 17101.0,
+   "wrong": 924,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 32.55325,
+   "worst": 33.008875,
+   "spi": 6171.5,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "8 overlapping 16x16 in 48x48",
+  "TI C driver": {
+   "avg": 38.02,
+   "worst": 38.02,
+   "spi": 9704.0,
+   "wrong": 352,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 15.78455,
+   "worst": 17.12775,
+   "spi": 2397.5,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "HUD: 5-digit counter (6x10)",
+  "TI C driver": {
+   "avg": 6.56125,
+   "worst": 6.56125,
+   "spi": 1150.0,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 2.413575,
+   "worst": 2.82025,
+   "spi": 188.4,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "64 single pixels change",
+  "TI C driver": {
+   "avg": 9.28,
+   "worst": 9.28,
+   "spi": 1664.0,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 11.13935,
+   "worst": 11.515875,
+   "spi": 2351.3,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "Full-screen fill, new color",
+  "TI C driver": {
+   "avg": 90.217375,
+   "worst": 90.217375,
+   "spi": 32781.0,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 59.096875,
+   "worst": 59.096875,
+   "spi": 32779.0,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "Scrolling stripes (all rows)",
+  "TI C driver": {
+   "avg": 91.8063375,
+   "worst": 91.815375,
+   "spi": 32987.7,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 68.67365,
+   "worst": 69.692,
+   "spi": 31755.0,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "Palette animation (sky color)",
+  "TI C driver": {
+   "avg": 105.494125,
+   "worst": 105.494125,
+   "spi": 37775.0,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 35.5485,
+   "worst": 35.5485,
+   "spi": 32779.0,
+   "wrong": 0,
+   "errors": 0
+  }
+ }
+]

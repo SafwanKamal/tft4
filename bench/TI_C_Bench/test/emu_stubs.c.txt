@@ -1,0 +1,19 @@
+/* emu_stubs.c.txt (not .c, so CCS does not compile it) - what TI's compiler provides as intrinsics, for the clang build */
+void __delay_cycles(unsigned long n) { (void)n; }
+void __enable_interrupt(void) { }
+/* 16-bit / 32-bit unsigned division helpers clang calls (rt.c has the rest) */
+unsigned int __mspabi_divu(unsigned int n, unsigned int d)
+{
+    unsigned int q = 0, r = 0; int i;
+    for (i = 15; i >= 0; i--) { r = (r << 1) | ((n >> i) & 1); if (r >= d) { r -= d; q |= 1u << i; } }
+    return q;
+}
+unsigned int __mspabi_remu(unsigned int n, unsigned int d)
+{
+    return n - __mspabi_divu(n, d) * d;
+}
+unsigned long __mspabi_divul(unsigned long n, unsigned long d);
+unsigned long __mspabi_remul(unsigned long n, unsigned long d)
+{
+    return n - __mspabi_divul(n, d) * d;
+}

@@ -1,0 +1,240 @@
+[
+ {
+  "scene": "Idle (nothing changes)",
+  "TI C driver": {
+   "avg": 0.0,
+   "worst": 0.0,
+   "spi": 0.0,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 0.009,
+   "worst": 0.009,
+   "spi": 0.0,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "1 sprite 8x8",
+  "TI C driver": {
+   "avg": 1.660875,
+   "worst": 1.660875,
+   "spi": 357.0,
+   "wrong": 22,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 1.112060546875,
+   "worst": 1.2225,
+   "spi": 202.46875,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "4 sprites 8x8",
+  "TI C driver": {
+   "avg": 6.643505859375,
+   "worst": 6.643625,
+   "spi": 1428.0,
+   "wrong": 89,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 3.786576171875,
+   "worst": 4.3095,
+   "spi": 876.390625,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "16 sprites 8x8",
+  "TI C driver": {
+   "avg": 26.574037109375,
+   "worst": 26.57425,
+   "spi": 5712.0,
+   "wrong": 330,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 15.30569140625,
+   "worst": 16.5015,
+   "spi": 3658.453125,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "32 sprites 8x8",
+  "TI C driver": {
+   "avg": 53.148056640625,
+   "worst": 53.14825,
+   "spi": 11424.0,
+   "wrong": 600,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 28.854453125,
+   "worst": 30.68275,
+   "spi": 7160.3125,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "1 sprite 16x16",
+  "TI C driver": {
+   "avg": 4.75250390625,
+   "worst": 4.752625,
+   "spi": 1213.0,
+   "wrong": 69,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 2.157740234375,
+   "worst": 2.189125,
+   "spi": 537.28125,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "1 sprite 32x32",
+  "TI C driver": {
+   "avg": 16.046125,
+   "worst": 16.046125,
+   "spi": 4461.0,
+   "wrong": 242,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 5.7834453125,
+   "worst": 5.971125,
+   "spi": 1810.859375,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "1 sprite 64x64",
+  "TI C driver": {
+   "avg": 59.07975,
+   "worst": 59.07975,
+   "spi": 17101.0,
+   "wrong": 928,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 20.683900390625,
+   "worst": 23.438,
+   "spi": 5262.734375,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "8 overlapping 16x16 in 48x48",
+  "TI C driver": {
+   "avg": 38.02,
+   "worst": 38.02,
+   "spi": 9704.0,
+   "wrong": 320,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 10.587658203125,
+   "worst": 12.391625,
+   "spi": 2512.140625,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "HUD: 5-digit counter (6x10)",
+  "TI C driver": {
+   "avg": 6.56125,
+   "worst": 6.56125,
+   "spi": 1150.0,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 1.6249140625,
+   "worst": 2.0705,
+   "spi": 141.265625,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "64 single pixels change",
+  "TI C driver": {
+   "avg": 9.28,
+   "worst": 9.28,
+   "spi": 1664.0,
+   "wrong": 7,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 10.134462890625,
+   "worst": 10.753625,
+   "spi": 1888.0625,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "Full-screen fill, new color",
+  "TI C driver": {
+   "avg": 90.217375,
+   "worst": 90.217375,
+   "spi": 32781.0,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 49.038125,
+   "worst": 49.038125,
+   "spi": 32779.0,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "Scrolling stripes (all rows)",
+  "TI C driver": {
+   "avg": 91.804546875,
+   "worst": 91.815375,
+   "spi": 32987.375,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 64.295109375,
+   "worst": 66.71175,
+   "spi": 31243.0,
+   "wrong": 0,
+   "errors": 0
+  }
+ },
+ {
+  "scene": "Palette animation (sky color)",
+  "TI C driver": {
+   "avg": 105.494125,
+   "worst": 105.494125,
+   "spi": 37775.0,
+   "wrong": 0,
+   "errors": 0
+  },
+  "tft4 (asm)": {
+   "avg": 35.548625,
+   "worst": 35.548625,
+   "spi": 32779.0,
+   "wrong": 0,
+   "errors": 0
+  }
+ }
+]
