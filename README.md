@@ -171,10 +171,8 @@ Every step was measured on the board (demo, 12 sprites / 4 sprites, present only
 | v2 | **DMA streaming** from two RAM line buffers, CPU expands in parallel | **~33.5 ms** (SPI-bound) | 9–11 ms | ~6 ms |
 | v3 | **Touched ranges** per row, **retained drawing** with a background layer, Front updated while sending (no buffer swap) | ~34 ms | **~7.5 ms** | **~2.5 ms** |
 | v4 | Faster drawing (below), `FbPixel`, `FbText`, early return when nothing was drawn | same | same present, drawing ~2x faster | |
-| v5 | **16 MHz** CPU and SPI (`ClockInit`, FRAM wait state) | ~17 ms predicted | | |
+| v5 | **16 MHz** CPU and SPI (`ClockInit`, FRAM wait state) | ~19 ms | 1.55–1.8x faster in every benchmark scene (section 9) | |
 | v6 | Packaging: settings in `tft4_config.inc`, `FbRestoreSpr`, `PaletteLoad`, `Tft4ClockMHz`, a C header, examples, `sync_driver.sh` | | | |
-
-v5 is predicted from the emulator and still needs measuring on the board.
 
 What each step taught:
 
@@ -519,7 +517,28 @@ The scene data for all three is generated from `suite.py`, so they run identical
   - stars erased under them,
   - overlapping sprites wiping each other.
 
-**16 MHz.** The emulator predicts half of every tft4 number. For example: 32 balls 14.5 ms, full fill 24.5 ms, palette 17.8 ms. Both bench programs now default to 16 MHz (`TI_C_Bench`: `BENCH_MHZ` in `bench_clock.h`). The board numbers will show what the FRAM wait state costs.
+**Board, 16 MHz** (tft4, `CLOCK_MHZ` 16, SPI at 16 MHz, 2026-09-27). The panel worked at 16 MHz SPI with no errors.
+
+| Scene | tft4 8 MHz | tft4 16 MHz | 16 MHz speedup |
+|---|---|---|---|
+| Idle | 0.01 | 0.01 | – |
+| 1 ball 8x8 | 1.03 | 0.63 | 1.63x |
+| 4 balls 8x8 | 3.52 | 2.20 | 1.60x |
+| 16 balls 8x8 | 14.30 | 9.00 | 1.59x |
+| 32 balls 8x8 | 27.06 | 16.98 | 1.59x |
+| 1 ball 16x16 | 2.00 | 1.25 | 1.60x |
+| 1 ball 32x32 | 5.42 | 3.41 | 1.59x |
+| 1 ball 64x64 | 19.64 | 12.50 | 1.57x |
+| 8 overlapping | 10.04 | 6.40 | 1.57x |
+| HUD counter | 1.56 | 1.00 | 1.56x |
+| 64 pixels | 9.59 | 5.95 | 1.61x |
+| Full fill | 46.20 | 27.79 | 1.66x |
+| Stripes | 60.99 | 37.13 | 1.64x |
+| Palette | 34.40 | 19.36 | 1.78x |
+
+- **Speedup:** 1.55–1.8x, not the full 2x. Above 8 MHz the FRAM needs a wait state, and the frame buffers are read and written in FRAM on every present. The emulator doesn't model that, so it predicted exactly 2x.
+- **The limit:** a full-screen resend (palette) takes 19.4 ms against the SPI minimum of 16.4 ms, so it is 85% of the bus rate.
+- **Against TI's C driver at 8 MHz:** tft4 at 16 MHz is 1.9x (64 pixels) to 8.3x (HUD) faster. For example, 32 balls go from 64.15 to 16.98 ms. TI_C_Bench can also run at 16 MHz (`bench_clock.h`) for a same-clock comparison.
 
 ---
 
@@ -601,3 +620,11 @@ Two CCS gotchas:
 - A second font.
 - A `FbLine` routine.
 - Double-height pixels (128x64 logical) for 2x fewer bytes per change.
+
+---
+
+## License
+
+The tft4 driver, tools, examples, demo, benchmarks and tests are under the **MIT License** (`LICENSE`).
+
+The 6x8 font data (`font6x8.asm`, converted from TI's grlib) and the TI code that `bench/TI_C_Bench` uses for comparison (GrLib, DriverLib, the Crystalfontz driver) keep **TI's BSD 3-clause license**. See `THIRD_PARTY_NOTICES.md` and `licenses/TI-BSD-3-Clause.txt`.

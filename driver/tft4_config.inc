@@ -1,5 +1,6 @@
 ;******************************************************************************
 ; tft4_config.inc - settings for tft4.asm
+; SPDX-License-Identifier: MIT (see LICENSE)
 ; tft4.asm includes this file; assembly programs can include it too, to get
 ; CLOCK_MHZ for their timers. Keep one copy per project and change it there
 ; (tools/sync_driver.sh never overwrites an existing one).

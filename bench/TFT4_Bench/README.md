@@ -62,6 +62,29 @@ This is what `tools/test/test_bench.py` measures when it runs this program from 
 | 13 | Stripes | 64.33 | 66.75 | 60.99 |
 | 14 | Palette | 35.55 | 35.55 | 34.40 |
 
+## Results at 16 MHz (board, 2026-09-27)
+
+The board runs this at `CLOCK_MHZ` 16 and `SPI_DIV` 1, which puts the SPI at 16 MHz.
+
+| # | Scene | board avg ms | vs 8 MHz |
+|---|---|---|---|
+| 1 | Idle | 0.01 | – |
+| 2 | 1 ball 8x8 | 0.63 | 1.63x faster |
+| 3 | 4 balls 8x8 | 2.20 | 1.60x faster |
+| 4 | 16 balls 8x8 | 9.00 | 1.59x faster |
+| 5 | 32 balls 8x8 | 16.98 | 1.59x faster |
+| 6 | 1 ball 16x16 | 1.25 | 1.60x faster |
+| 7 | 1 ball 32x32 | 3.41 | 1.59x faster |
+| 8 | 1 ball 64x64 | 12.50 | 1.57x faster |
+| 9 | 8 overlapping | 6.40 | 1.57x faster |
+| 10 | HUD counter | 1.00 | 1.56x faster |
+| 11 | 64 pixels | 5.95 | 1.61x faster |
+| 12 | Full fill | 27.79 | 1.66x faster |
+| 13 | Stripes | 37.13 | 1.64x faster |
+| 14 | Palette | 19.36 | 1.78x faster |
+
+16 MHz is 1.55–1.8x faster, not 2x, because the FRAM needs a wait state above 8 MHz.
+
 ## Files
 
 | File | What |
